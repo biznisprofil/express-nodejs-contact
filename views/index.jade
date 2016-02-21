@@ -1,0 +1,30 @@
+extends layout
+
+block content
+   .jumbotron
+       .container
+           h1 Welcome on Express website
+           p#para This is bootstrap contact form with express framework, nodeJS handler and jade template. Form also contains javascript events for interaction with clients. For download go to Github
+           a.btn.btn-primary.btn-lg(href='https://github.com/biznisprofil/client-side-contact-form') See code on Github &raquo;
+   .custom
+            h1 Contact Us
+        .container
+        
+            .form-group
+                label Name
+                input#contactname.form-control(type='text', onfocus='focusFunctionName()', onblur='return validateFormName()', name='name', placeholder='Enter Name')
+                p#error
+            .form-group
+                label Phone
+                input#phone.form-control(type='text', onfocus='focusFunctionPhone()', onblur='return validateFormPhone()', name='phone', placeholder='Enter telephone number')
+                p#error1
+            .form-group
+                label Email
+                input#email.form-control(type='email', onfocus='focusFunctionEmail()', onblur='return validateFormEmail()', name='email', placeholder='Enter Email')
+                p#error2
+            .form-group
+                label Message
+                textarea.form-control(name='message', placeholder='Enter Message...')
+            button.btn.btn-default(type='submit') Submit
+            
+  
